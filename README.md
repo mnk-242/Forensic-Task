@@ -47,3 +47,32 @@
   The first step to starting the investigation will consist of verifying the Hash of the image, if the Hash provided matches with the Hash of the image then the integrity of   the evidence is valid and the investigation may continue. If the hash does not match, then the evidence has been tampered with and there is no point in continuing the        investigation.
   If the image hash matches the one provided, the next step will be checking the partition tables to gather information regarding the volumes and storage required. This also   will be documented and described below. The files within the image were be locked and one hint provided was the keyword “forensics”. 
 
+**Execution**
+I used the software OS forensics and used the verify/create hash tool. After selecting the file button and entering the file path of the image, I selected the types of hash functions needed (these were SHA-1 and SHA-256).
+In the comparison hash, I added the hash provided from the ‘image info’ file that contained the SHA-1 and SHA-256 hash. I used the SHA-256 hash and selected the calculate option so the software would calculate and verify automatically.
+Provided Hash info(FIG8)
+Hash calculation (FIG9)
+The hash calculated is the same as the hash provided, thus the integrity of the image is valid.
+
+Used WinHex to check the partition tables of the image
+Partition Table (FIG10)
+checked the partition table from 0x1BE and copied the result to a notepad. The image below describes the partitions. (FIG11)
+The two table images below helped understanding the volume/size and file type of each partition.
+(TB1 + TB2)
+
+**Accessing the Image itself**
+Directly accessing the files was not possible, because an error would show up stating that the disc was corrupted. To counter this error, I created a virtual hard disc (VHD) and partitioned it according to the file types and size.
+
+**Accessing Volume E (1/4)**
+All the Volumes were locked via a bitlocker. Volume E was the only volume that was unlocked using the hint (password being forensics).
+There were a few hidden files in total (2 files and 2 folders); one was an mp4, one was a png and two folders. 
+The png file was initially hidden and would not open so I copied it and applied a few different file extensions to check if some data would be retrieved (the pdf extension was successful). The data found was mostly junk or misleading within this volume save for a bitlocker recovery key which was applied to the other 3 volumes (Volume F was unlocked).
+
+**Accessing Volume F (2/4)**
+The result of accessing Volume F displayed nothing (i.e. it was empty).
+After recovering the data within the volume by running it through R-Studio, the result displayed two files (Root and metafiles).
+
+The “Root” folder contained 6 files and one folder.
+•	3 files were mp4 files
+•	3 files were txt files, 2 of them were empty and the last “clue.txt” contained a hash.
+•	The last folder was named “Keys”
