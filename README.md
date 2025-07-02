@@ -117,4 +117,18 @@ The data recovered from this file included the following;
 
 Refer to Tb3 for the logged data regarding the computer name and more in a tabular form.
 
+**End Notes**
+There are many forensics guidelines that are in place for specific reasons such as safety, integrity and security. Many organizations have their own guidelines to prevent any breach of privacy or forms of tampering of evidence by unauthorized individuals.
+
+It is recommended to have evidence/device delivered to by a secondary source, it is best to consider that tampering can occur through that source, and thus it is better to send trusted personnel to handle the evidence along with the time stamps, signature and possibly location (i.e. maintain a chain of custody).
+
+The device should be stored securely in a location with physical and virtual security, this may be a room with locks that is remotely monitored and controlled in terms of temperature, and humidity. The handlers should also be trained so as to not expose the physical evidence to any magnetic fields or static current. The evidence should also be handled in pairs.
+
+The evidence should be maintained as an image and have regular and remote backup, and the investigators should document as they conduct the investigation.
+
+The investigation should only occur within the lab, and should only be conducted on the organizational workstations and tools (so there is no way to steal data). The lab should also be monitored by cameras; no personnel should be allowed to take any technological device to the lab.
+
+Training and reviews should be conducted along with tests to ensure that the technical staff are all up to standards. This way the staff can be reminded of legal and ethical restrictions that may compromise their work or investigation.
+
+This concludes the end of the recommendations regarding the improvement of the process and procedures in the method of conducting digital forensics.
 
