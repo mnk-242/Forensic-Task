@@ -1,5 +1,6 @@
 # Forensic-Task
   Conducted a forensic investigation on a provided image as well as a file with a hash, this was to confirm the integrity of the evidence. The first step of the                investigation is the planning of the investigation.
+  **This report is a summerized version**
 
 **Planning**
   •	It is important to document everything about the evidence and investigation such as (who will conduct the investigation, the expected outcome and what tools and              techniques will be used).
