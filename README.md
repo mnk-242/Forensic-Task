@@ -54,14 +54,23 @@ I used the software OS forensics and used the verify/create hash tool. After sel
 In the comparison hash, I added the hash provided from the ‘image info’ file that contained the SHA-1 and SHA-256 hash. I used the SHA-256 hash and selected the calculate option so the software would calculate and verify automatically.
 Provided Hash info 
 ![Image of Checksum and more](fig8.png)
-Hash calculation (FIG9)
+
+Hash Calculation
+![Hash Calculation Image](fig9.png) 
+
 The hash calculated is the same as the hash provided, thus the integrity of the image is valid.
 
 Used WinHex to check the partition tables of the image
-Partition Table (FIG10)
-checked the partition table from 0x1BE and copied the result to a notepad. The image below describes the partitions. (FIG11)
+Partition Table 
+![Image of Partition Table](fig10.png)
+
+Checked the partition table from 0x1BE and copied the result to a notepad. The image below describes the partitions. 
+![notes of partition table](fig11.png)
 The two table images below helped understanding the volume/size and file type of each partition.
-(TB1 + TB2)
+
+![table1](tb1.png)
+![table2](tb2.png)
+
 
 **Accessing the Image itself**
 Directly accessing the files was not possible, because an error would show up stating that the disc was corrupted. To counter this error, I created a virtual hard disc (VHD) and partitioned it according to the file types and size.
@@ -80,13 +89,14 @@ The “Root” folder contained 6 files and one folder.
 •	3 files were txt files, 2 of them were empty and the last “clue.txt” contained a hash.
 •	The last folder was named “Keys”
 
-Clue.txt was put through hashes.com (an online cracking website). The result is displayed in (Fig21).
+Clue.txt was put through hashes.com (an online cracking website). The result is displayed in the image below.
+![cracked hash image](Fig21.png)
 The rest of the files were investigated and logged, though most did not have any meaningful data. Using another recovery key found within the F volume, volume G was unlocked.
 
 **Accessing Volume G (3/4)**
-Similar to Volume F, Volume G had no data or hidden files. Running this volume through rstudio did recover data that could be investigated.  
+Similar to Volume F, Volume G had no data or hidden files. Running this volume through r-studio did recover data that could be investigated.  
 
-Files recovered from Volume G from (file 1/2 named root); (Refer to Fig 26 and 27)
+Files recovered from Volume G from (file 1/2 named root); (Refer to images below)
 •	$RECYCLE.BIN
   o	Desktop file
 •	1. Welcome to Windows Forensic Analysis
@@ -99,6 +109,9 @@ Files recovered from Volume G from (file 1/2 named root); (Refer to Fig 26 and 2
   o	AadRecoverPasswordDelete
     -	1 txt file containing a recovery key.
 
+![Recovered Volume G](Fig26.png)
+![Recovered Volume G](Fig27.png)
+
 All Data within these files were logged seperately. A few recovery passwords were found and applied to the leftover Volume H;
 
 **Accessing Voume H**
@@ -109,7 +122,7 @@ Volume H had two text documents
 The test file had no useful data thus the registry file was accessed.
 The data recovered from this file included the following;
 •	Active computer name - Fig39
-•	Product name - Fig41
+•	Product name - Fig40
 •	Product ID - Fig41
 •	Installed Date and Time 
 •	Registered Owner - Fig42
@@ -117,7 +130,21 @@ The data recovered from this file included the following;
 •	Network Cards - Fig43
 •	Friendly names of USB connected - Fig44, Fig45, Fig46, Fig47, Fig48
 
-Refer to Tb3 for the logged data regarding the computer name and more in a tabular form.
+![alt text](Fig39.png)
+![alt text](Fig40.png)
+![alt text](Fig41.png)
+![alt text](Fig42.png)
+![alt text](Fig43.png)
+![alt text](Fig44.png)
+![alt text](Fig45.png)
+![alt text](Fig46.png)
+![alt text](Fig47.png)
+![alt text](Fig48.png)
+![alt text](image-url)
+![alt text](image-url)
+
+**Summary of Data collected**
+![data collected](Tb3.png)
 
 # End Notes
 There are many forensics guidelines that are in place for specific reasons such as safety, integrity and security. Many organizations have their own guidelines to prevent any breach of privacy or forms of tampering of evidence by unauthorized individuals.
