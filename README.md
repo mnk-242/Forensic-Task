@@ -52,20 +52,26 @@
 **Execution**
 I used the software OS forensics and used the verify/create hash tool. After selecting the file button and entering the file path of the image, I selected the types of hash functions needed (these were SHA-1 and SHA-256).
 In the comparison hash, I added the hash provided from the ‘image info’ file that contained the SHA-1 and SHA-256 hash. I used the SHA-256 hash and selected the calculate option so the software would calculate and verify automatically.
-Provided Hash info 
+
+**Provided Hash info**
+
 ![Image of Checksum and more](fig8.png)
 
-Hash Calculation
+**Hash Calculation**
+
 ![Hash Calculation Image](fig9.png) 
 
 The hash calculated is the same as the hash provided, thus the integrity of the image is valid.
 
 Used WinHex to check the partition tables of the image
-Partition Table 
+**Partition Table** 
+
 ![Image of Partition Table](fig10.png)
 
 Checked the partition table from 0x1BE and copied the result to a notepad. The image below describes the partitions. 
+
 ![notes of partition table](fig11.png)
+
 The two table images below helped understanding the volume/size and file type of each partition.
 
 ![table1](tb1.png)
@@ -90,7 +96,9 @@ The “Root” folder contained 6 files and one folder.
 •	The last folder was named “Keys”
 
 Clue.txt was put through hashes.com (an online cracking website). The result is displayed in the image below.
+
 ![cracked hash image](Fig21.png)
+
 The rest of the files were investigated and logged, though most did not have any meaningful data. Using another recovery key found within the F volume, volume G was unlocked.
 
 **Accessing Volume G (3/4)**
@@ -142,6 +150,7 @@ The data recovered from this file included the following;
 ![alt text](Fig48.png)
 
 **Summary of Data collected**
+
 ![data collected](Tb3.png)
 
 # End Notes
