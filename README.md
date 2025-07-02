@@ -76,3 +76,44 @@ The “Root” folder contained 6 files and one folder.
 •	3 files were mp4 files
 •	3 files were txt files, 2 of them were empty and the last “clue.txt” contained a hash.
 •	The last folder was named “Keys”
+
+Clue.txt was put through hashes.com (an online cracking website). The result is displayed in (Fig21).
+The rest of the files were investigated and logged, though most did not have any meaningful data. Using another recovery key found within the F volume, volume G was unlocked.
+
+**Accessing Volume G (3/4)**
+Similar to Volume F, Volume G had no data or hidden files. Running this volume through rstudio did recover data that could be investigated.  
+
+Files recovered from Volume G from (file 1/2 named root); (Refer to Fig 26 and 27)
+•	$RECYCLE.BIN
+  o	Desktop file
+•	1. Welcome to Windows Forensic Analysis
+  o	5 videos
+•	2. The Donald Blake Case
+  o	8 videos
+•	Keys (was an empty folder)
+•	System Volume Information (around 18 files and 2 folders)
+  o	$LIENT (Empty folder)
+  o	AadRecoverPasswordDelete
+    -	1 txt file containing a recovery key.
+
+All Data within these files were logged seperately. A few recovery passwords were found and applied to the leftover Volume H;
+
+**Accessing Voume H**
+Volume H had two text documents 
+1. Registry
+2. Test
+
+The test file had no useful data thus the registry file was accessed.
+The data recovered from this file included the following;
+•	Active computer name - Fig39
+•	Product name - Fig41
+•	Product ID - Fig41
+•	Installed Date and Time 
+•	Registered Owner - Fig42
+•	Time Zone Key Name - Fig40
+•	Network Cards - Fig43
+•	Friendly names of USB connected - Fig44, Fig45, Fig46, Fig47, Fig48
+
+Refer to Tb3 for the logged data regarding the computer name and more in a tabular form.
+
+
