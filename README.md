@@ -140,8 +140,6 @@ The data recovered from this file included the following;
 ![alt text](Fig46.png)
 ![alt text](Fig47.png)
 ![alt text](Fig48.png)
-![alt text](image-url)
-![alt text](image-url)
 
 **Summary of Data collected**
 ![data collected](Tb3.png)
