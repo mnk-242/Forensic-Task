@@ -1,7 +1,7 @@
 # Forensic-Task
   Conducted a forensic investigation on a provided image as well as a file with a hash, this was to confirm the integrity of the evidence. The first step of the                investigation is the planning of the investigation.
   **This report is a summerized version**
-
+  
 **Planning**
   •	It is important to document everything about the evidence and investigation such as (who will conduct the investigation, the expected outcome and what tools and              techniques will be used).
   •	The evidence should be allocated in a room with locks and surveillance cameras (to monitor who accesses the evidence).
@@ -34,7 +34,8 @@
   •	Time zone of the device
 
 
-**Investigation**
+# Investigation
+
   **Identification**
     The evidence given was an image of a hard disk (1GB of data) along with its hash. I am required to conduct a digital forensics on an image of a hard disk and report all      the data found within it. The image is expected to contain multiple files hiding a lot of different data with one file containing a registry. 
   
@@ -51,7 +52,8 @@
 **Execution**
 I used the software OS forensics and used the verify/create hash tool. After selecting the file button and entering the file path of the image, I selected the types of hash functions needed (these were SHA-1 and SHA-256).
 In the comparison hash, I added the hash provided from the ‘image info’ file that contained the SHA-1 and SHA-256 hash. I used the SHA-256 hash and selected the calculate option so the software would calculate and verify automatically.
-Provided Hash info(FIG8)
+Provided Hash info 
+![Image of Checksum and more](fig8.png)
 Hash calculation (FIG9)
 The hash calculated is the same as the hash provided, thus the integrity of the image is valid.
 
@@ -117,7 +119,7 @@ The data recovered from this file included the following;
 
 Refer to Tb3 for the logged data regarding the computer name and more in a tabular form.
 
-**End Notes**
+# End Notes
 There are many forensics guidelines that are in place for specific reasons such as safety, integrity and security. Many organizations have their own guidelines to prevent any breach of privacy or forms of tampering of evidence by unauthorized individuals.
 
 It is recommended to have evidence/device delivered to by a secondary source, it is best to consider that tampering can occur through that source, and thus it is better to send trusted personnel to handle the evidence along with the time stamps, signature and possibly location (i.e. maintain a chain of custody).
